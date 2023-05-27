@@ -1,0 +1,7 @@
+C:\Users\Alumno\Desktop\EjersDePOO\ABM\bin\Debug\ABM.exe.config
+C:\Users\Alumno\Desktop\EjersDePOO\ABM\bin\Debug\ABM.exe
+C:\Users\Alumno\Desktop\EjersDePOO\ABM\bin\Debug\ABM.pdb
+C:\Users\Alumno\Desktop\EjersDePOO\ABM\obj\Debug\ABM.csprojAssemblyReference.cache
+C:\Users\Alumno\Desktop\EjersDePOO\ABM\obj\Debug\ABM.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\Desktop\EjersDePOO\ABM\obj\Debug\ABM.exe
+C:\Users\Alumno\Desktop\EjersDePOO\ABM\obj\Debug\ABM.pdb
