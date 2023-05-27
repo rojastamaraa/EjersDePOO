@@ -12,15 +12,16 @@ namespace ABM
 		string name;
 		int DNI;
 
-	 public Usuario (string name, int DNI)
+		public Usuario(string name, int DNI)
 		{
 			this.name = name;
 			this.DNI = DNI;
 		}
 
-		public static Usuario Nuevousu (string name, int DNI)
+		public static string Nuevousu(List<Usuario> usu, string name, int DNI)
 		{
-			Console.Write("yeah");
+			usu.Add(new Usuario(name, DNI));
+			return "Usuario " + name + " agregado exitosamente";
 		}
 
 	} 
@@ -29,6 +30,9 @@ namespace ABM
 	{
 		static void Main(string[] args)
 		{
+
+			List<Usuario> usu = new List<Usuario>();
+
 			string[] menu =
 			{
 				"1. Nuevo usuario",
@@ -60,8 +64,7 @@ namespace ABM
 							string name = Console.ReadLine();
 							Console.Write("Ingrese DNI del usuario: ");
 							int DNI = int.Parse(Console.ReadLine());
-							
-
+							Console.Write(Usuario.Nuevousu(usu, name, DNI));
 							break;
 						case 2:
 							break;
