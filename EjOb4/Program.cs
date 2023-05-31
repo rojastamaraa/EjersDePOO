@@ -13,19 +13,20 @@ namespace EjOb4
 		private char consumo = 'F';
 		private double peso = 5;
 
-		public Electrodomestico() { }
+		public Electrodomestico() {}
 
 		public Electrodomestico(double preciobase, double peso)
 		{
 			this.preciobase = preciobase;
 			this.peso = peso;
+
 		}
 
 		public Electrodomestico(double preciobase, string color, char consumo, double peso)
 		{
 			this.preciobase = preciobase;
-			this.color = color;
-			this.consumo = consumo;
+			comprobarColor(color);
+			comprobarConsumoEner(consumo);
 			this.peso = peso;
 		}
 
@@ -87,7 +88,7 @@ namespace EjOb4
 			}
 		}
 
-		public void precio_final()
+		public double precio_final()
 		{
 			double precio = preciobase; 
 			switch(this.consumo)
@@ -111,25 +112,135 @@ namespace EjOb4
 					preciobase += 10;
 					break;
 			}
+
+			if(this.peso > 0 && this.peso < 19)
+			{
+				this.peso += 10;
+			}
+			else if (this.peso > 20 && this.peso < 49)
+			{
+				this.peso += 50;
+			}
+			else if (this.peso > 50 && this.peso < 79)
+			{
+				this.peso += 80;
+			}
+			else if (this.peso > 80)
+			{
+				this.peso += 100;
+			}
+			return precio;
 		}
 	}
-	class Program
+
+	class Lavadora : Electrodomestico
+	{
+		private double carga = 5;
+
+		public Lavadora(): base() { }
+
+		public Lavadora (double precio, double peso) : base(precio, peso) {}
+
+		public Lavadora(double precio, string color, char consumo, double peso, double carga) : base (precio, color, consumo, peso)
+		{
+			this.carga = carga;
+		}
+
+		public double Carga
+		{
+			get
+			{
+				return this.carga;
+			}
+		}
+
+		public double precioFinal()
+		{
+			double precio = base.precio_final();
+			if(this.carga > 30 )
+			{
+				precio += 50;
+			}
+
+			return precio;
+		}
+	}
+
+	class Television : Electrodomestico
+	{
+		private double resolucion = 20;
+		private bool TDT = false;
+
+		public Television(): base() { }
+
+		public Television(double precio, double peso):base(precio, peso) { }
+
+		public Television(double precio, string color, char consumo, double peso, double resolucion, bool TDT) : base(precio, color, consumo, peso)
+		{
+			this.resolucion = resolucion;
+			this.TDT = TDT;
+		}
+
+		public double Resolucion
+		{
+			get
+			{
+				return this.resolucion;
+			}
+		}
+
+		public bool Tdt
+		{
+			get
+			{
+				return this.TDT;
+			}
+		}
+
+		public double preciofinal()
+		{
+			double precio = base.precio_final();
+			if(this.resolucion > 40)
+			{
+				precio *= 1.30F;;
+			}
+			return precio;
+		}
+
+	}
+
+	class Ejecutable
 	{
 		static void Main(string[] args)
 		{
+
+			Electrodomestico[] electrodomesticos = new Electrodomestico[10];
+
+			electrodomesticos[0] = new Television(10, "Rosa", 'Z', 65, 50, false);
+			electrodomesticos[1] = new Lavadora(10, "Violeta", 'A', 81, 20);
+			electrodomesticos[2] = new Television();
+			electrodomesticos[3] = new Television(10,15);
+			electrodomesticos[4] = new Lavadora(30,26);
+			electrodomesticos[5] = new Television();
+			electrodomesticos[6] = new Lavadora(40, "rojo", 'B', 20, 15);
+			electrodomesticos[7] = new Lavadora();
+			electrodomesticos[8] = new Lavadora();
+			electrodomesticos[9] = new Television();
+
+			for (int i = 0; i < electrodomesticos.Length; i++)
+			{
+				electrodomesticos[i].precio_final();
+				Console.WriteLine(electrodomesticos[i].Preciobase + " " + electrodomesticos[i].Peso);
+			}
+
+
+
+
+
+
+			Console.ReadLine();
+
 		}
 	}
 }
-//Crearemos una superclase llamada Electrodoméstico con las siguientes características:
-//Sus atributos son precio base, color, consumo energético(letras entre A y F) y peso.Indica que se podrán heredar.
-//Por defecto, el color será blanco, el consumo energético será F, el precioBase es de 100 € y el peso de 5 kg.Usa constantes para ello.
-//Los colores disponibles son blanco, negro, rojo, azul y gris.No importa si el nombre está en mayúsculas o en minúsculas.
-//Los constructores que se implementarán serán
-//Un constructor por defecto.
-//Un constructor con el precio y peso.El resto por defecto.
-//Un constructor con todos los atributos.
-//Los métodos que implementara serán:
-//Métodos get de todos los atributos.
-//comprobarConsumoEnergetico(char letra): comprueba que la letra es correcta, sino es correcta usará la letra por defecto. Se invocará al crear el objeto y no será visible.
-//comprobarColor(String color): comprueba que el color es correcto, sino lo es usa el color por defecto. Se invocará al crear el objeto y no será visible.
-//precioFinal(): según el consumo energético, aumentará su precio, y según su tamaño, también.Esta es la lista de precios:
+
