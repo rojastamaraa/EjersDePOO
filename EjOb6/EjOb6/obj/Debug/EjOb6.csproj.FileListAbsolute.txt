@@ -1,8 +1,0 @@
-C:\Users\Alumno\Desktop\EjersDePOO\EjOb6\EjOb6\bin\Debug\EjOb6.exe.config
-C:\Users\Alumno\Desktop\EjersDePOO\EjOb6\EjOb6\bin\Debug\EjOb6.exe
-C:\Users\Alumno\Desktop\EjersDePOO\EjOb6\EjOb6\bin\Debug\EjOb6.pdb
-C:\Users\Alumno\Desktop\EjersDePOO\EjOb6\EjOb6\obj\Debug\EjOb6.csproj.AssemblyReference.cache
-C:\Users\Alumno\Desktop\EjersDePOO\EjOb6\EjOb6\obj\Debug\EjOb6.csproj.SuggestedBindingRedirects.cache
-C:\Users\Alumno\Desktop\EjersDePOO\EjOb6\EjOb6\obj\Debug\EjOb6.csproj.CoreCompileInputs.cache
-C:\Users\Alumno\Desktop\EjersDePOO\EjOb6\EjOb6\obj\Debug\EjOb6.exe
-C:\Users\Alumno\Desktop\EjersDePOO\EjOb6\EjOb6\obj\Debug\EjOb6.pdb
