@@ -1,7 +1,0 @@
-C:\Users\Alumno\Desktop\EjersDePOO\Listas_ejer1\bin\Debug\Listas_ejer1.exe.config
-C:\Users\Alumno\Desktop\EjersDePOO\Listas_ejer1\bin\Debug\Listas_ejer1.exe
-C:\Users\Alumno\Desktop\EjersDePOO\Listas_ejer1\bin\Debug\Listas_ejer1.pdb
-C:\Users\Alumno\Desktop\EjersDePOO\Listas_ejer1\obj\Debug\Listas_ejer1.csprojAssemblyReference.cache
-C:\Users\Alumno\Desktop\EjersDePOO\Listas_ejer1\obj\Debug\Listas_ejer1.csproj.CoreCompileInputs.cache
-C:\Users\Alumno\Desktop\EjersDePOO\Listas_ejer1\obj\Debug\Listas_ejer1.exe
-C:\Users\Alumno\Desktop\EjersDePOO\Listas_ejer1\obj\Debug\Listas_ejer1.pdb

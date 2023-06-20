@@ -1,7 +1,0 @@
-C:\Users\Alumno\Desktop\EjersDePOO\EjOb4\bin\Debug\EjOb4.exe.config
-C:\Users\Alumno\Desktop\EjersDePOO\EjOb4\bin\Debug\EjOb4.exe
-C:\Users\Alumno\Desktop\EjersDePOO\EjOb4\bin\Debug\EjOb4.pdb
-C:\Users\Alumno\Desktop\EjersDePOO\EjOb4\obj\Debug\EjOb4.csprojAssemblyReference.cache
-C:\Users\Alumno\Desktop\EjersDePOO\EjOb4\obj\Debug\EjOb4.csproj.CoreCompileInputs.cache
-C:\Users\Alumno\Desktop\EjersDePOO\EjOb4\obj\Debug\EjOb4.exe
-C:\Users\Alumno\Desktop\EjersDePOO\EjOb4\obj\Debug\EjOb4.pdb

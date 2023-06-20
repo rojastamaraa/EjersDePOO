@@ -1,0 +1,6 @@
+C:\Users\Alumno\Desktop\po\TamaraRojas\Listas3\bin\Debug\Listas3.exe.config
+C:\Users\Alumno\Desktop\po\TamaraRojas\Listas3\bin\Debug\Listas3.exe
+C:\Users\Alumno\Desktop\po\TamaraRojas\Listas3\bin\Debug\Listas3.pdb
+C:\Users\Alumno\Desktop\po\TamaraRojas\Listas3\obj\Debug\Listas3.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\Desktop\po\TamaraRojas\Listas3\obj\Debug\Listas3.exe
+C:\Users\Alumno\Desktop\po\TamaraRojas\Listas3\obj\Debug\Listas3.pdb

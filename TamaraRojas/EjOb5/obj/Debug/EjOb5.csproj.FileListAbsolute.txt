@@ -1,0 +1,7 @@
+C:\Users\Alumno\Desktop\EjersDePOO\TamaraRojas\EjOb5\bin\Debug\EjOb5.exe.config
+C:\Users\Alumno\Desktop\EjersDePOO\TamaraRojas\EjOb5\bin\Debug\EjOb5.exe
+C:\Users\Alumno\Desktop\EjersDePOO\TamaraRojas\EjOb5\bin\Debug\EjOb5.pdb
+C:\Users\Alumno\Desktop\EjersDePOO\TamaraRojas\EjOb5\obj\Debug\EjOb5.csprojAssemblyReference.cache
+C:\Users\Alumno\Desktop\EjersDePOO\TamaraRojas\EjOb5\obj\Debug\EjOb5.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\Desktop\EjersDePOO\TamaraRojas\EjOb5\obj\Debug\EjOb5.exe
+C:\Users\Alumno\Desktop\EjersDePOO\TamaraRojas\EjOb5\obj\Debug\EjOb5.pdb

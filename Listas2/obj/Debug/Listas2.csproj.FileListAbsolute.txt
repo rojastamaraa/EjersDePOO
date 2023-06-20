@@ -1,7 +1,0 @@
-C:\Users\Alumno\Desktop\EjersDePOO\Listas2\bin\Debug\Listas2.exe.config
-C:\Users\Alumno\Desktop\EjersDePOO\Listas2\bin\Debug\Listas2.exe
-C:\Users\Alumno\Desktop\EjersDePOO\Listas2\bin\Debug\Listas2.pdb
-C:\Users\Alumno\Desktop\EjersDePOO\Listas2\obj\Debug\Listas2.csprojAssemblyReference.cache
-C:\Users\Alumno\Desktop\EjersDePOO\Listas2\obj\Debug\Listas2.csproj.CoreCompileInputs.cache
-C:\Users\Alumno\Desktop\EjersDePOO\Listas2\obj\Debug\Listas2.exe
-C:\Users\Alumno\Desktop\EjersDePOO\Listas2\obj\Debug\Listas2.pdb

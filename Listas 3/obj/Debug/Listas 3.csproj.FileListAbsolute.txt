@@ -1,7 +1,0 @@
-C:\Users\Alumno\Desktop\EjersDePOO\Listas 3\bin\Debug\Listas 3.exe.config
-C:\Users\Alumno\Desktop\EjersDePOO\Listas 3\bin\Debug\Listas 3.exe
-C:\Users\Alumno\Desktop\EjersDePOO\Listas 3\bin\Debug\Listas 3.pdb
-C:\Users\Alumno\Desktop\EjersDePOO\Listas 3\obj\Debug\Listas 3.csprojAssemblyReference.cache
-C:\Users\Alumno\Desktop\EjersDePOO\Listas 3\obj\Debug\Listas 3.csproj.CoreCompileInputs.cache
-C:\Users\Alumno\Desktop\EjersDePOO\Listas 3\obj\Debug\Listas 3.exe
-C:\Users\Alumno\Desktop\EjersDePOO\Listas 3\obj\Debug\Listas 3.pdb
