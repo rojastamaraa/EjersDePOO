@@ -36,13 +36,12 @@ namespace EjOb10
 
 		public void barajar()
 		{
-			for (int i = 0; i < baraja.Count; i++)
+			for (int i = 0; i <= baraja.Count; i++)
 			{
 				int indice = r.Next(0, baraja.Count);
 				Carta cc = baraja[indice];
 				baraja.Insert(i, cc);
 				baraja.Remove(cc);
-
 			}
 		}
 
@@ -151,9 +150,8 @@ namespace EjOb10
 				"	  Mostrar baraja    " 
 			};
 
-			//bool salir = false;
 			int pos = 0;
-			//Console.CursorVisible = false;
+			Console.CursorVisible = false;
 
 			menuu(menu, pos);
 
@@ -236,7 +234,6 @@ namespace EjOb10
 					Console.Write("Cantidad de cartas que desea: ");
 					int peticion = int.Parse(Console.ReadLine());
 					Console.Clear();
-					//int peticion = Console.Read();
 					List<Carta> list = b.darCartas(peticion);
 					menuu(menu, pos);
 					if (list != null)
