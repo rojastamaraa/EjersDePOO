@@ -2,30 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace EjOb10
 {
-//Vamos a hacer una baraja de cartas españolas orientado a objetos.
-//Una carta tiene un número entre 1 y 12 (el 8 y el 9 no los incluimos) y un palo(espadas, bastos, oros y copas)
-//La baraja estará compuesta por un conjunto de cartas, 40 exactamente.
-//Las operaciones que podrá realizar la baraja son:
-//barajar() : cambia de posición todas las cartas aleatoriamente
-// siguienteCarta(): devuelve la siguiente carta que está en la baraja, cuando no haya más o se haya llegado al final,
-//		se indica al usuario que no hay más cartas.
-// cartasDisponibles(): indica el número de cartas que aún puede repartir
-// darCartas(): dado un número de cartas que nos pidan, le devolveremos ese número de cartas(piensa que puedes devolver). En caso de que haya menos cartas que las pedidas, 
-//		no devolveremos nada pero debemos indicarlo al usuario.
-//cartasMonton(): mostramos aquellas cartas que ya han salido, si no ha salido ninguna indicárselo al usuario
-//mostrarBaraja() : muestra todas las cartas hasta el final.Es decir, si se saca una carta y luego se llama al método, este no mostrará esa primera carta.
 	class Baraja
 	{
 		public List<Carta> baraja;
+		public List<Carta> monton;
 		public static Random r = new Random();
 
 		public Baraja()
 		{
 			baraja = new List<Carta>();
+			monton = new List<Carta>();
 			cartas();
 		}
 
@@ -55,6 +45,66 @@ namespace EjOb10
 
 			}
 		}
+
+		public Carta siguienteCarta()
+		{
+			if (baraja.Count > 0)
+			{
+				Carta ca = baraja[0];
+				monton.Add(ca);
+				baraja.Remove(ca);
+				return ca;
+			}
+			else
+			{
+				return null;
+			}
+		}
+
+		public int cartasDisponibles()
+		{
+			return baraja.Count;
+		}
+
+		public List<Carta> darCartas(int peticion)
+		{
+			List<Carta> cartass = new List<Carta>();
+			if (cartasDisponibles() >= peticion)
+			{
+				for (int i = 0; i < peticion; i++)
+				{
+					cartass.Add(siguienteCarta());
+				}
+			}
+			else
+			{
+				return null;
+			}
+			return cartass;
+		}
+
+		public List<Carta> cartasMonton()
+		{
+			if (monton.Count > 0)
+			{
+				return monton;
+			}
+			else
+			{
+				return null;
+			}
+		}
+
+		public void mostrarBaraja(List<Carta> baraja)
+		{
+			for (int i = 0; i < baraja.Count; i++)
+			{
+				Console.SetCursorPosition(50, i + 1);
+				Console.BackgroundColor = ConsoleColor.Black;
+				Console.ForegroundColor = ConsoleColor.White;
+				Console.WriteLine("Palo: " + baraja[i].palo + " Valor: " + baraja[i].valor);
+			}
+		}
 	}
 
 	class Carta
@@ -74,22 +124,127 @@ namespace EjOb10
 		static void Main(string[] args)
 		{
 			Baraja b = new Baraja();
-			for (int i = 0; i < b.baraja.Count; i++)
+			string[] menu =
 			{
-				Console.WriteLine("Palo: " + b.baraja[i].palo + " Valor: " + b.baraja[i].valor);
-			}
+				"	     Barajar	    ",
+				"	  Siguiente Carta   ",
+				"	Cartas Disponibles  ",
+				"      Dar cartas       ",
+				"	     Monton         ",
+				"	  Mostrar baraja    " 
+			};
 
-			Console.WriteLine("BARAJADO");
+			bool salir = false;
+			int pos = 0;
+			Console.CursorVisible = false;
 
-
-			b.barajar();
-			b.barajar();
-			for (int i = 0; i < b.baraja.Count; i++)
+			for (int i = 0; i < menu.Length; i++)
 			{
-				Console.WriteLine("Palo: " + b.baraja[i].palo + " Valor: " + b.baraja[i].valor);
+				if (i == 0)
+				{
+					Console.BackgroundColor = ConsoleColor.Gray;
+					Console.ForegroundColor = ConsoleColor.Black;
+				}
+				else
+				{
+					Console.BackgroundColor = ConsoleColor.Black;
+					Console.ForegroundColor = ConsoleColor.White;
+				}
+				Console.SetCursorPosition(5, i + 1);
+				Console.Write(menu[i]);
 			}
+			while (!salir)
+			{
+				//COMIENZO MENU
+				ConsoleKeyInfo tecla = Console.ReadKey(true);
+				if (tecla.Key == ConsoleKey.DownArrow && pos < 5)
+				{
+					Console.SetCursorPosition(5, pos + 1);
+					Console.BackgroundColor = ConsoleColor.Black;
+					Console.ForegroundColor = ConsoleColor.White;
+					Console.Write(menu[pos]);
+					pos++;
+					Console.SetCursorPosition(5, pos + 1);
+					Console.BackgroundColor = ConsoleColor.Gray;
+					Console.ForegroundColor = ConsoleColor.Black;
+					Console.Write(menu[pos]);
+				}
+				if (tecla.Key == ConsoleKey.UpArrow && pos >  0)
+				{
+					Console.SetCursorPosition(5, pos + 1);
+					Console.BackgroundColor = ConsoleColor.Black;
+					Console.ForegroundColor = ConsoleColor.White;
+					Console.Write(menu[pos]);
+					pos = pos - 1;
+					Console.SetCursorPosition(5, pos + 1);
+					Console.BackgroundColor = ConsoleColor.Gray;
+					Console.ForegroundColor = ConsoleColor.Black;
+					Console.Write(menu[pos]);
+				}
+				//FIN MENU
+		
+				if (tecla.Key == ConsoleKey.Enter && pos == 0)
+				{
+					Console.Clear();
+					b.barajar();
+					b.barajar();
+					b.barajar();
+					b.mostrarBaraja(b.baraja);
+				}
+				if (tecla.Key == ConsoleKey.Enter && pos == 1)
+				{
+					Console.SetCursorPosition(50, 1);
+					Console.BackgroundColor = ConsoleColor.Black;
+					Console.ForegroundColor = ConsoleColor.White;
+					Carta car = b.siguienteCarta();
+					if (car != null)
+					{
+						Console.WriteLine("Palo: " + car.palo + " Valor: " + car.valor);
+					}
+					else
+					{
+						Console.WriteLine("No hay mas cartas");
+					}
+				}
+				if (tecla.Key == ConsoleKey.Enter && pos == 2)
+				{
+					int cartatas = b.cartasDisponibles();
+					Console.SetCursorPosition(50, 1);
+					Console.BackgroundColor = ConsoleColor.Black;
+					Console.ForegroundColor = ConsoleColor.White;
+					if (cartatas > 0)
+					{
+						Console.WriteLine("Cartas disponibles: " + cartatas);
+					}
+					else
+					{
+						Console.WriteLine("No hay cartas disponibles");
+					}
+				}
+				if (tecla.Key == ConsoleKey.Enter && pos == 3)
+				{
 
-			Console.Read();
+				}
+				if (tecla.Key == ConsoleKey.Enter && pos == 4)
+				{
+					List<Carta> mon = b.cartasMonton();
+					if (mon != null)
+					{
+						b.mostrarBaraja(b.monton);
+					}
+					else
+					{
+						Console.SetCursorPosition(50, 1);
+						Console.BackgroundColor = ConsoleColor.Black;
+						Console.ForegroundColor = ConsoleColor.White;
+						Console.WriteLine("No hay cartas en el monton");
+					}
+				}
+				if (tecla.Key == ConsoleKey.Enter && pos == 5)
+				{
+					b.mostrarBaraja(b.baraja);
+				}
+			}
 		}
 	}
 }
