@@ -20,18 +20,76 @@ namespace EjOb10
 //mostrarBaraja() : muestra todas las cartas hasta el final.Es decir, si se saca una carta y luego se llama al método, este no mostrará esa primera carta.
 	class Baraja
 	{
-		
+		public List<Carta> baraja;
+		public static Random r = new Random();
+
+		public Baraja()
+		{
+			baraja = new List<Carta>();
+			cartas();
+		}
+
+		private void cartas()
+		{
+			int[] valores = { 1, 2, 3, 4, 5, 6, 7, 10, 11, 12};
+			string[] palo = { "espada", "basto", "oro", "copas"};
+
+			for (int i = 0; i < palo.Length; i++)
+			{
+				for (int j = 0; j < valores.Length; j++)
+				{
+					Carta c = new Carta(valores[j], palo[i]);
+					baraja.Add(c);
+				}
+			}
+		}
+
+		public void barajar()
+		{
+			for (int i = 0; i < baraja.Count; i++)
+			{
+				int indice = r.Next(0, baraja.Count);
+				Carta cc = baraja[indice];
+				baraja.Insert(i, cc);
+				baraja.Remove(cc);
+
+			}
+		}
 	}
 
 	class Carta
 	{
+		public int valor;
+		public string palo;
 
+		public Carta(int valor, string palo)
+		{
+			this.valor = valor;
+			this.palo = palo;
+		}
 	}
 
 	class Program
 	{
 		static void Main(string[] args)
 		{
+			Baraja b = new Baraja();
+			for (int i = 0; i < b.baraja.Count; i++)
+			{
+				Console.WriteLine("Palo: " + b.baraja[i].palo + " Valor: " + b.baraja[i].valor);
+			}
+
+			Console.WriteLine("BARAJADO");
+
+
+			b.barajar();
+			b.barajar();
+			for (int i = 0; i < b.baraja.Count; i++)
+			{
+				Console.WriteLine("Palo: " + b.baraja[i].palo + " Valor: " + b.baraja[i].valor);
+			}
+
+			Console.Read();
 		}
 	}
 }
