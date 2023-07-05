@@ -121,6 +121,23 @@ namespace EjOb10
 
 	class Program
 	{
+		static void menuu(string[] menu, int pos)
+		{
+			for (int i = 0; i < menu.Length; i++)
+			{
+				if (i == pos)
+				{
+					Console.ForegroundColor = ConsoleColor.Green;
+				}
+				else
+				{
+					Console.ForegroundColor = ConsoleColor.White;
+				}
+				Console.SetCursorPosition(5, i + 1);
+				Console.Write(menu[i]);
+			}
+		}
+
 		static void Main(string[] args)
 		{
 			Baraja b = new Baraja();
@@ -134,65 +151,53 @@ namespace EjOb10
 				"	  Mostrar baraja    " 
 			};
 
-			bool salir = false;
+			//bool salir = false;
 			int pos = 0;
-			Console.CursorVisible = false;
+			//Console.CursorVisible = false;
 
-			for (int i = 0; i < menu.Length; i++)
-			{
-				if (i == 0)
-				{
-					Console.BackgroundColor = ConsoleColor.Gray;
-					Console.ForegroundColor = ConsoleColor.Black;
-				}
-				else
-				{
-					Console.BackgroundColor = ConsoleColor.Black;
-					Console.ForegroundColor = ConsoleColor.White;
-				}
-				Console.SetCursorPosition(5, i + 1);
-				Console.Write(menu[i]);
-			}
-			while (!salir)
+			menuu(menu, pos);
+
+			while (true)
 			{
 				//COMIENZO MENU
 				ConsoleKeyInfo tecla = Console.ReadKey(true);
+				if (tecla.Key == ConsoleKey.Enter)
+				{
+					Console.Clear();
+				}
 				if (tecla.Key == ConsoleKey.DownArrow && pos < 5)
 				{
 					Console.SetCursorPosition(5, pos + 1);
-					Console.BackgroundColor = ConsoleColor.Black;
 					Console.ForegroundColor = ConsoleColor.White;
 					Console.Write(menu[pos]);
 					pos++;
 					Console.SetCursorPosition(5, pos + 1);
-					Console.BackgroundColor = ConsoleColor.Gray;
-					Console.ForegroundColor = ConsoleColor.Black;
+					Console.ForegroundColor = ConsoleColor.Green;
 					Console.Write(menu[pos]);
 				}
 				if (tecla.Key == ConsoleKey.UpArrow && pos >  0)
 				{
 					Console.SetCursorPosition(5, pos + 1);
-					Console.BackgroundColor = ConsoleColor.Black;
 					Console.ForegroundColor = ConsoleColor.White;
 					Console.Write(menu[pos]);
 					pos = pos - 1;
 					Console.SetCursorPosition(5, pos + 1);
-					Console.BackgroundColor = ConsoleColor.Gray;
-					Console.ForegroundColor = ConsoleColor.Black;
+					Console.ForegroundColor = ConsoleColor.Green;
 					Console.Write(menu[pos]);
 				}
 				//FIN MENU
 		
 				if (tecla.Key == ConsoleKey.Enter && pos == 0)
 				{
-					Console.Clear();
-					b.barajar();
+					menuu(menu, pos);
+  					b.barajar();
 					b.barajar();
 					b.barajar();
 					b.mostrarBaraja(b.baraja);
 				}
 				if (tecla.Key == ConsoleKey.Enter && pos == 1)
 				{
+					menuu(menu, pos);
 					Console.SetCursorPosition(50, 1);
 					Console.BackgroundColor = ConsoleColor.Black;
 					Console.ForegroundColor = ConsoleColor.White;
@@ -208,6 +213,7 @@ namespace EjOb10
 				}
 				if (tecla.Key == ConsoleKey.Enter && pos == 2)
 				{
+					menuu(menu, pos);
 					int cartatas = b.cartasDisponibles();
 					Console.SetCursorPosition(50, 1);
 					Console.BackgroundColor = ConsoleColor.Black;
@@ -223,10 +229,33 @@ namespace EjOb10
 				}
 				if (tecla.Key == ConsoleKey.Enter && pos == 3)
 				{
-
+					menuu(menu, pos);
+					Console.SetCursorPosition(50, 1);
+					Console.BackgroundColor = ConsoleColor.Black;
+					Console.ForegroundColor = ConsoleColor.White;
+					Console.Write("Cantidad de cartas que desea: ");
+					int peticion = int.Parse(Console.ReadLine());
+					Console.Clear();
+					//int peticion = Console.Read();
+					List<Carta> list = b.darCartas(peticion);
+					menuu(menu, pos);
+					if (list != null)
+					{
+						b.mostrarBaraja(list);
+					}
+					else
+					{
+						Console.SetCursorPosition(50, 1);
+						Console.BackgroundColor = ConsoleColor.Black;
+						Console.ForegroundColor = ConsoleColor.White;
+						Console.WriteLine("Cantidad de cartas en la baraja insuficiente");
+						Console.SetCursorPosition(50, 2);
+						Console.WriteLine("Cantidad: " + b.cartasDisponibles());
+					}
 				}
 				if (tecla.Key == ConsoleKey.Enter && pos == 4)
 				{
+					menuu(menu, pos);
 					List<Carta> mon = b.cartasMonton();
 					if (mon != null)
 					{
@@ -242,8 +271,10 @@ namespace EjOb10
 				}
 				if (tecla.Key == ConsoleKey.Enter && pos == 5)
 				{
+					menuu(menu, pos);
 					b.mostrarBaraja(b.baraja);
 				}
+				
 			}
 		}
 	}
