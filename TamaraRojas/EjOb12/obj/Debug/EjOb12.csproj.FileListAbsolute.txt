@@ -1,0 +1,7 @@
+C:\Users\Alumno\Desktop\EjersDePOO\TamaraRojas\EjOb12\bin\Debug\EjOb12.exe.config
+C:\Users\Alumno\Desktop\EjersDePOO\TamaraRojas\EjOb12\bin\Debug\EjOb12.exe
+C:\Users\Alumno\Desktop\EjersDePOO\TamaraRojas\EjOb12\bin\Debug\EjOb12.pdb
+C:\Users\Alumno\Desktop\EjersDePOO\TamaraRojas\EjOb12\obj\Debug\EjOb12.csprojAssemblyReference.cache
+C:\Users\Alumno\Desktop\EjersDePOO\TamaraRojas\EjOb12\obj\Debug\EjOb12.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\Desktop\EjersDePOO\TamaraRojas\EjOb12\obj\Debug\EjOb12.exe
+C:\Users\Alumno\Desktop\EjersDePOO\TamaraRojas\EjOb12\obj\Debug\EjOb12.pdb
