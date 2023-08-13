@@ -85,6 +85,7 @@ namespace EjOb11
 			else
 			{
 				//el resultado es cero entonces no participa de la apuesta B)
+				dinero = dinero - 1;
 				resultado = 0;
 			}
 		}
@@ -102,7 +103,7 @@ namespace EjOb11
 				p.Add(new Participante(r));
 			}
 
-			Console.WriteLine("Resultado: " + a.resultado + " Pozo: " + a.pozo);
+			Console.WriteLine("Enter para comenzar");
 
 			bool juego = false;
 			while (juego == false)
@@ -111,7 +112,7 @@ namespace EjOb11
 				if (tecla.Key == ConsoleKey.Enter)
 				{
 					Console.Clear();
-					Console.WriteLine("Resultado: " + a.resultado + " Pozo: " + a.pozo);
+					a.info(r);
 					for (int i = 0; i < p.Count; i++)
 					{
 						p[i].apostar(r);
@@ -128,7 +129,14 @@ namespace EjOb11
 						for (int i = 0; i < p.Count; i++)
 						{
 							Console.ForegroundColor = ConsoleColor.White;
-							Console.WriteLine("Jugador: " + i + " Resultado: " + p[i].resultado + " Dinero: " + p[i].dinero + " Veces ganadas: " + p[i].vecesGanadas);
+							if (p[i].dinero >= 0)
+							{
+								Console.WriteLine("Jugador: " + i + " Resultado: " + p[i].resultado + " Dinero: " + p[i].dinero + " Veces ganadas: " + p[i].vecesGanadas);
+							}
+							else if (p[i].dinero < 0)
+							{
+								Console.WriteLine("Jugador: " + i + " Resultado: " + p[i].resultado + " Dinero: 0 Veces ganadas: " + p[i].vecesGanadas);
+							}
 						}
 						juego = true;
 					}
@@ -139,17 +147,17 @@ namespace EjOb11
 						Console.WriteLine("Aun no hay ganadores");
 						for (int i = 0; i < p.Count; i++)
 						{
-							if (p[i].dinero > 0)
+							if (p[i].dinero >= 0)
 							{
 								Console.WriteLine("Jugador: " + i + " Resultado: " + p[i].resultado + " Dinero: " + p[i].dinero + " Veces ganadas: " + p[i].vecesGanadas);
 							}
-							else
+							else if (p[i].dinero < 0)
 							{
 								Console.WriteLine("Jugador: " + i + " ya no participa debido a que se quedo sin dinero");
 							}
 						}
 					}
-					a.info(r);
+					
 				}
 			}
 
