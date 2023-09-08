@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cE5mTtDBdWju4r8LCIt93NaOpGOn6Y3WUDirldOVqWaSd0l+2oa0gF5GehGbVxh4sb6jbbKTbkK5yeDD2+SEbg==",
+  "dgSpecHash": "Uy/zNBMXwfrG44OtRQVJw8qgWY7cv9cXyfkZWlLS50xXd77LxAU0GGDrWL1gv5Jcs+gPnKHDuavAklQmE+NXFw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alumno\\Desktop\\tatatamara\\EjersDePOO\\chocopoitsa\\chocopoitsa\\chocopoitsa.csproj",
+  "projectFilePath": "C:\\Users\\Alumno\\Desktop\\EjersDePOO\\chocopoitsa\\chocopoitsa\\chocopoitsa.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alumno\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
     "C:\\Users\\Alumno\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"

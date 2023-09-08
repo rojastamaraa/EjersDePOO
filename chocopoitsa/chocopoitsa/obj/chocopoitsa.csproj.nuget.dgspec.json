@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alumno\\Desktop\\tatatamara\\EjersDePOO\\chocopoitsa\\chocopoitsa\\chocopoitsa.csproj": {}
+    "C:\\Users\\Alumno\\Desktop\\EjersDePOO\\chocopoitsa\\chocopoitsa\\chocopoitsa.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alumno\\Desktop\\tatatamara\\EjersDePOO\\chocopoitsa\\chocopoitsa\\chocopoitsa.csproj": {
+    "C:\\Users\\Alumno\\Desktop\\EjersDePOO\\chocopoitsa\\chocopoitsa\\chocopoitsa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alumno\\Desktop\\tatatamara\\EjersDePOO\\chocopoitsa\\chocopoitsa\\chocopoitsa.csproj",
+        "projectUniqueName": "C:\\Users\\Alumno\\Desktop\\EjersDePOO\\chocopoitsa\\chocopoitsa\\chocopoitsa.csproj",
         "projectName": "chocopoitsa",
-        "projectPath": "C:\\Users\\Alumno\\Desktop\\tatatamara\\EjersDePOO\\chocopoitsa\\chocopoitsa\\chocopoitsa.csproj",
+        "projectPath": "C:\\Users\\Alumno\\Desktop\\EjersDePOO\\chocopoitsa\\chocopoitsa\\chocopoitsa.csproj",
         "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alumno\\Desktop\\tatatamara\\EjersDePOO\\chocopoitsa\\chocopoitsa\\obj\\",
+        "outputPath": "C:\\Users\\Alumno\\Desktop\\EjersDePOO\\chocopoitsa\\chocopoitsa\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
