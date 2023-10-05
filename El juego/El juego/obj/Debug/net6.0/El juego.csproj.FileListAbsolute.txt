@@ -1,0 +1,39 @@
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\El juego.exe
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\El juego.deps.json
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\El juego.runtimeconfig.json
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\El juego.dll
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\El juego.pdb
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\MonoGame.Framework.dll
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\obj\Debug\net6.0\El juego.csproj.AssemblyReference.cache
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\obj\Debug\net6.0\El juego.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\obj\Debug\net6.0\El juego.AssemblyInfoInputs.cache
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\obj\Debug\net6.0\El juego.AssemblyInfo.cs
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\obj\Debug\net6.0\El juego.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\obj\Debug\net6.0\El juego.csproj.CopyComplete
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\obj\Debug\net6.0\El juego.dll
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\obj\Debug\net6.0\refint\El juego.dll
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\obj\Debug\net6.0\El juego.pdb
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\obj\Debug\net6.0\El juego.genruntimeconfig.cache
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\obj\Debug\net6.0\ref\El juego.dll
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\Content\tbhwalk.xnb
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\Content\tbh.xnb
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\Content\tbhcry.xnb
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\Content\tbhDown.xnb
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\Content\tbhDown2.xnb
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\Content\tbhDown3.xnb
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\Content\tbhside.xnb
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\Content\tbhside2.xnb
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\Content\tbhside3.xnb
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\Content\tbhUp.xnb
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\Content\tbhUp2.xnb
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\Content\tbhUp3.xnb
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\Content\tbhzzz.xnb
+C:\Users\Alumno\Desktop\EjersDePOO\El juego\El juego\bin\Debug\net6.0\Content\img\tbhwalk.xnb
