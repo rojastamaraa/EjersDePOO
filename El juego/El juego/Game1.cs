@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using El_juego._Managers;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -6,9 +7,10 @@ namespace El_juego
 {
     public class Game1 : Game
     {
-        private GraphicsDeviceManager _graphics;
+        private readonly GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        public Texture2D tbh;
+        private GameManager _gameManager;
+
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -18,7 +20,14 @@ namespace El_juego
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            _graphics.PreferredBackBufferWidth = 1024;
+            _graphics.PreferredBackBufferHeight = 768;
+            _graphics.ApplyChanges();
+
+            Globals.Content = Content;
+
+            _gameManager = new();
+            _gameManager.Init();
 
             base.Initialize();
         }
@@ -26,10 +35,7 @@ namespace El_juego
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            tbh = Content.Load<Texture2D>("img/tbhwalk");
-
-
-            // TODO: use this.Content to load your game content here
+            Globals.SpriteBatch = _spriteBatch;
         }
 
         protected override void Update(GameTime gameTime)
@@ -37,21 +43,19 @@ namespace El_juego
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
+            Globals.Update(gameTime);
+            _gameManager.Update();
 
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Beige);
 
             _spriteBatch.Begin();
-
-            _spriteBatch.Draw(tbh, new Vector2(0, 0), new Rectangle(0, 0, 609, 609), Color.White, 0f, Vector2.Zero, 0.1f, SpriteEffects.None, 0f);
+            _gameManager.Draw();
             _spriteBatch.End();
-
-            // TODO: Add your drawing code here
 
             base.Draw(gameTime);
         }
