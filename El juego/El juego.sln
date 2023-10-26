@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.5.33516.290
+VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "El juego", "El juego\El juego.csproj", "{BE259A85-83E1-4792-827B-F7ABC4800309}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "El juego", "El juego.csproj", "{756BA051-90B9-41CF-B00B-FB665AA0C902}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BE259A85-83E1-4792-827B-F7ABC4800309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE259A85-83E1-4792-827B-F7ABC4800309}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE259A85-83E1-4792-827B-F7ABC4800309}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE259A85-83E1-4792-827B-F7ABC4800309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{756BA051-90B9-41CF-B00B-FB665AA0C902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{756BA051-90B9-41CF-B00B-FB665AA0C902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{756BA051-90B9-41CF-B00B-FB665AA0C902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{756BA051-90B9-41CF-B00B-FB665AA0C902}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {32D6CD04-4916-4605-A979-10224AA61F39}
+		SolutionGuid = {6479BD7F-FBB9-4639-8ADD-C627FD64C06D}
 	EndGlobalSection
 EndGlobal
