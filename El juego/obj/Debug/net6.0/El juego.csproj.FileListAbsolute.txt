@@ -24,3 +24,4 @@ C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\obj\Debug\net6.0\refint\E
 C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\obj\Debug\net6.0\El juego.pdb
 C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\obj\Debug\net6.0\El juego.genruntimeconfig.cache
 C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\obj\Debug\net6.0\ref\El juego.dll
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\Background.xnb

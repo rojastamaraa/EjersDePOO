@@ -4,9 +4,11 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/Background.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/tbhwalk.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

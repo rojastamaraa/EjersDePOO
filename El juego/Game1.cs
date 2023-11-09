@@ -13,10 +13,14 @@ namespace El_juego
 		private SpriteBatch _spriteBatch;
 		public Animacion tbh;
 		public Texture2D tbhTexture;
+		public Texture2D backgroundLv1;
 		private Vector2 tbhPos = new Vector2(100, 100);
 		public int indiceTbh;
 		private SpriteEffects spriteEffect;
+		float temp;
+		bool cambioRealizado = false;
 
+		int p = 1;
 		public Game1()
 		{
 			_graphics = new GraphicsDeviceManager(this);
@@ -26,8 +30,6 @@ namespace El_juego
 
 		protected override void Initialize()
 		{
-			// TODO: Add your initialization logic here
-
 			base.Initialize();
 		}
 
@@ -35,9 +37,9 @@ namespace El_juego
 		{
 			_spriteBatch = new SpriteBatch(GraphicsDevice);
 			tbhTexture = Content.Load<Texture2D>("img/tbhwalk");
+			backgroundLv1 = Content.Load<Texture2D>("img/Background");
 			spriteEffect = SpriteEffects.None;
-			tbh = new Animacion(tbhTexture, tbhPos, spriteEffect, 200, 609, 609, 0, indiceTbh, 4);
-
+			tbh = new Animacion(tbhTexture, tbhPos, spriteEffect, 300, 609, 609, indiceTbh, 6);
 		}
 
 		protected override void Update(GameTime gameTime)
@@ -46,11 +48,23 @@ namespace El_juego
 				Exit();
 
 			KeyboardState key = Keyboard.GetState();
-			if (key.GetPressedKeys().Length == 0)
+			if (key.GetPressedKeys().Length == 0 && p == 1)
 			{
-				tbh.frameActual = 0;
+				indiceTbh = 3;
+
+				p = 2;
+				tbh.Update(gameTime);
 			}
-				if (key.IsKeyDown(Keys.Down))
+			else
+			{
+				temp+= (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+				if (temp > 5000)
+				{
+					p = 1;
+				}
+			}
+			
+			if (key.IsKeyDown(Keys.Down))
 			{
 				indiceTbh = 0;
 				tbh.Update(gameTime);
@@ -85,7 +99,7 @@ namespace El_juego
 			GraphicsDevice.Clear(Color.CornflowerBlue);
 
 			_spriteBatch.Begin();
-
+			_spriteBatch.Draw(backgroundLv1, new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), Color.White);
 			tbh.spriteEffect= spriteEffect;
 			tbh.Y = indiceTbh;
 			tbh.Draw(_spriteBatch);

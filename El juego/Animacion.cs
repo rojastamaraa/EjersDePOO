@@ -8,8 +8,8 @@ public class Animacion
 	public Vector2 pos;
 	public SpriteEffects spriteEffect;
 	public float temporizador, tiempo;
-	public int ancho, alto, X, Y, cantFrames, frameActual;
-	public Animacion(Texture2D textura, Vector2 pos, SpriteEffects spriteEffect, float tiempo, int ancho, int alto, int X, int Y, int cantFrames)
+	public int ancho, alto, Y, cantFrames, frameActual;
+	public Animacion(Texture2D textura, Vector2 pos, SpriteEffects spriteEffect, float tiempo, int ancho, int alto, int Y, int cantFrames)
 	{
 		this.textura = textura;
 		this.pos = pos;
@@ -17,7 +17,6 @@ public class Animacion
 		this.tiempo = tiempo;
 		this.ancho = ancho;
 		this.alto = alto;
-		this.X = X;
 		this.Y = Y;
 		this.cantFrames = cantFrames;
 	}
