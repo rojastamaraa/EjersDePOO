@@ -17,16 +17,17 @@ namespace El_juego
 		private Vector2 tbhPos = new Vector2(100, 100);
 		public int indiceTbh;
 		private SpriteEffects spriteEffect;
-		float temp;
-		bool cambioRealizado = false;
-
-		int p = 1;
+		float temp, temp2;
+        bool parpadeo = false;
 		public Game1()
 		{
 			_graphics = new GraphicsDeviceManager(this);
 			Content.RootDirectory = "Content";
 			IsMouseVisible = true;
-		}
+            _graphics.PreferredBackBufferWidth = 800;
+            _graphics.PreferredBackBufferHeight = 600;
+            _graphics.IsFullScreen = false;
+        }
 
 		protected override void Initialize()
 		{
@@ -39,7 +40,7 @@ namespace El_juego
 			tbhTexture = Content.Load<Texture2D>("img/tbhwalk");
 			backgroundLv1 = Content.Load<Texture2D>("img/Background");
 			spriteEffect = SpriteEffects.None;
-			tbh = new Animacion(tbhTexture, tbhPos, spriteEffect, 300, 609, 609, indiceTbh, 6);
+			tbh = new Animacion(tbhTexture, tbhPos, spriteEffect, 150, 609, 609, indiceTbh, 4);
 		}
 
 		protected override void Update(GameTime gameTime)
@@ -48,23 +49,44 @@ namespace El_juego
 				Exit();
 
 			KeyboardState key = Keyboard.GetState();
-			if (key.GetPressedKeys().Length == 0 && p == 1)
+            if (key.GetPressedKeys().Length == 0)
 			{
-				indiceTbh = 3;
+                tbh.frameActual = 0;
+            }
 
-				p = 2;
-				tbh.Update(gameTime);
-			}
-			else
-			{
-				temp+= (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-				if (temp > 5000)
-				{
-					p = 1;
-				}
-			}
-			
-			if (key.IsKeyDown(Keys.Down))
+                //if (key.GetPressedKeys().Length == 0)
+                //{
+
+                //             temp += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+                //             if (temp > 2000)
+                //	{
+                //                 temp2 += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+                //                 if (temp2 < 1800)
+                //                 {
+                //                     indiceTbh = 3;
+                //                     tbh.Update(gameTime);
+                //                 }
+                //                 else
+                //                 {
+                //                     parpadeo = true;
+                //                     temp = 0;
+                //                     temp2 = 0;
+                //                 }
+                //             }
+                //             else if (parpadeo == true)
+                //             {
+                //                 indiceTbh = 0;
+                //                 tbh.frameActual = 0;
+                //                 parpadeo = false;
+                //             }
+                //	else if (parpadeo == false)
+                //	{
+                //                 tbh.frameActual = 0;
+                //             }
+                //         }
+
+
+                if (key.IsKeyDown(Keys.Down))
 			{
 				indiceTbh = 0;
 				tbh.Update(gameTime);
