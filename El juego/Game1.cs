@@ -11,14 +11,16 @@ namespace El_juego
 	{
 		private GraphicsDeviceManager _graphics;
 		private SpriteBatch _spriteBatch;
-		public Animacion tbh;
+		public Tbh tbh;
+		public Animacion tbhAni;
 		public Texture2D tbhTexture;
-		public Texture2D backgroundLv1;
 		private Vector2 tbhPos = new Vector2(100, 100);
 		public int indiceTbh;
+		public int vel = 150;
+		public Texture2D backgroundLv1;
 		private SpriteEffects spriteEffect;
-		float temp, temp2;
-        bool parpadeo = false;
+		//float temp, temp2;
+  //      bool parpadeo = false;
 		public Game1()
 		{
 			_graphics = new GraphicsDeviceManager(this);
@@ -40,7 +42,8 @@ namespace El_juego
 			tbhTexture = Content.Load<Texture2D>("img/tbhwalk");
 			backgroundLv1 = Content.Load<Texture2D>("img/Background");
 			spriteEffect = SpriteEffects.None;
-			tbh = new Animacion(tbhTexture, tbhPos, spriteEffect, 150, 609, 609, indiceTbh, 4);
+			tbhAni = new Animacion(tbhTexture, 609, 609, indiceTbh, 4);
+			tbh = new Tbh(tbhAni, tbhPos);
 		}
 
 		protected override void Update(GameTime gameTime)
@@ -51,66 +54,70 @@ namespace El_juego
 			KeyboardState key = Keyboard.GetState();
             if (key.GetPressedKeys().Length == 0)
 			{
-                tbh.frameActual = 0;
-            }
+				tbh.ani.frameActual = 0;
+			}
 
-                //if (key.GetPressedKeys().Length == 0)
-                //{
-
-                //             temp += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-                //             if (temp > 2000)
-                //	{
-                //                 temp2 += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-                //                 if (temp2 < 1800)
-                //                 {
-                //                     indiceTbh = 3;
-                //                     tbh.Update(gameTime);
-                //                 }
-                //                 else
-                //                 {
-                //                     parpadeo = true;
-                //                     temp = 0;
-                //                     temp2 = 0;
-                //                 }
-                //             }
-                //             else if (parpadeo == true)
-                //             {
-                //                 indiceTbh = 0;
-                //                 tbh.frameActual = 0;
-                //                 parpadeo = false;
-                //             }
-                //	else if (parpadeo == false)
-                //	{
-                //                 tbh.frameActual = 0;
-                //             }
-                //         }
-
-
-                if (key.IsKeyDown(Keys.Down))
+            if (key.IsKeyDown(Keys.Down))
 			{
+				if (key.IsKeyDown(Keys.LeftShift))
+				{
+					tbh.pos.Y += 2;
+					vel = 80;
+				}
+				else
+				{
+					tbh.pos.Y += 1;
+					vel = 150;
+				}
 				indiceTbh = 0;
-				tbh.Update(gameTime);
-				tbh.pos.Y += 1;
+				tbh.Update(gameTime, vel);
 			}
 			if (key.IsKeyDown(Keys.Up))
 			{
+				if (key.IsKeyDown(Keys.LeftShift))
+				{
+					tbh.pos.Y -= 2;
+					vel = 80;
+				}
+				else
+				{
+					tbh.pos.Y -= 1;
+					vel = 150;
+				}
 				indiceTbh = 1;
-				tbh.Update(gameTime);
-				tbh.pos.Y -= 1;
+				tbh.Update(gameTime, vel);
 			}
 			if (key.IsKeyDown(Keys.Left))
 			{
+				if (key.IsKeyDown(Keys.LeftShift))
+				{
+					tbh.pos.X -= 2;
+					vel = 80;
+				}
+				else
+				{
+					tbh.pos.X -= 1;
+					vel = 150;
+				}
 				spriteEffect = SpriteEffects.None;
 				indiceTbh = 2;
-				tbh.Update(gameTime);
-				tbh.pos.X -= 1;
+				tbh.Update(gameTime, vel);
 			}
 			if (key.IsKeyDown(Keys.Right))
 			{
+				if (key.IsKeyDown(Keys.LeftShift))
+				{
+					tbh.pos.X += 2;
+					vel = 80;
+				}
+				else
+				{
+					tbh.pos.X += 1;
+					vel = 150;
+				}
 				spriteEffect = SpriteEffects.FlipHorizontally;
 				indiceTbh = 2;
-				tbh.Update(gameTime);
-				tbh.pos.X += 1;
+				tbh.Update(gameTime, vel);
 			}
 
 			base.Update(gameTime);
@@ -122,9 +129,7 @@ namespace El_juego
 
 			_spriteBatch.Begin();
 			_spriteBatch.Draw(backgroundLv1, new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), Color.White);
-			tbh.spriteEffect= spriteEffect;
-			tbh.Y = indiceTbh;
-			tbh.Draw(_spriteBatch);
+			tbh.Draw(_spriteBatch, indiceTbh, spriteEffect);
 
 			_spriteBatch.End();
 			base.Draw(gameTime);

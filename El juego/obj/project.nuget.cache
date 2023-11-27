@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "8RO7xFc3LfHG4AZ6MCBXJP6EbTWK5XimSXFQ+Vf3PRbs9sOIR6aqBealhvgp8344bDvBb6MbeRDG3UDM2yw7Rw==",
+  "dgSpecHash": "kHhTIy0V0buZTMwzozYnYrws6nGjDNOeAPOFiBTlNNBpkYDCoL33QQe1EgmZmHP64GpGGdXVPsAnSquNdAARww==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alumno\\Desktop\\EjersDePOO\\El juego\\El juego.csproj",
+  "projectFilePath": "C:\\Users\\tamar\\OneDrive\\Escritorio\\EjersDePOO\\El juego\\El juego.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Alumno\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
-    "C:\\Users\\Alumno\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
+    "C:\\Users\\tamar\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\tamar\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
   ],
   "logs": []
 }

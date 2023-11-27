@@ -52,3 +52,4 @@ C:\Users\Alumno\Desktop\EjersDePOO\El juego\obj\Debug\net6.0\refint\El juego.dll
 C:\Users\Alumno\Desktop\EjersDePOO\El juego\obj\Debug\net6.0\El juego.pdb
 C:\Users\Alumno\Desktop\EjersDePOO\El juego\obj\Debug\net6.0\El juego.genruntimeconfig.cache
 C:\Users\Alumno\Desktop\EjersDePOO\El juego\obj\Debug\net6.0\ref\El juego.dll
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\grasstileset.xnb

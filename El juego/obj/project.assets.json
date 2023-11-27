@@ -102,19 +102,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alumno\\.nuget\\packages\\": {}
+    "C:\\Users\\tamar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alumno\\Desktop\\EjersDePOO\\El juego\\El juego.csproj",
+      "projectUniqueName": "C:\\Users\\tamar\\OneDrive\\Escritorio\\EjersDePOO\\El juego\\El juego.csproj",
       "projectName": "El juego",
-      "projectPath": "C:\\Users\\Alumno\\Desktop\\EjersDePOO\\El juego\\El juego.csproj",
-      "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alumno\\Desktop\\EjersDePOO\\El juego\\obj\\",
+      "projectPath": "C:\\Users\\tamar\\OneDrive\\Escritorio\\EjersDePOO\\El juego\\El juego.csproj",
+      "packagesPath": "C:\\Users\\tamar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tamar\\OneDrive\\Escritorio\\EjersDePOO\\El juego\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tamar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -165,7 +165,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
