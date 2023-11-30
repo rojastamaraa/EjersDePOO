@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 using System.ComponentModel.Design;
 using System.Runtime.InteropServices;
 using System.Threading;
@@ -19,6 +20,13 @@ namespace El_juego
 		public int vel = 150;
 		public Texture2D backgroundLv1;
 		private SpriteEffects spriteEffect;
+
+		//Elementos
+		public Elemento pasto;
+		public Texture2D pastoTexture;
+
+		//Mapa
+		public Map mapa;
 		//float temp, temp2;
   //      bool parpadeo = false;
 		public Game1()
@@ -28,7 +36,7 @@ namespace El_juego
 			IsMouseVisible = true;
             _graphics.PreferredBackBufferWidth = 800;
             _graphics.PreferredBackBufferHeight = 600;
-            _graphics.IsFullScreen = false;
+            _graphics.IsFullScreen = true;
         }
 
 		protected override void Initialize()
@@ -44,6 +52,13 @@ namespace El_juego
 			spriteEffect = SpriteEffects.None;
 			tbhAni = new Animacion(tbhTexture, 609, 609, indiceTbh, 4);
 			tbh = new Tbh(tbhAni, tbhPos);
+
+			//Elementos
+			pastoTexture = Content.Load<Texture2D>("img/suelo");
+			pasto = new Elemento(pastoTexture, 16, 16, 0, 0);
+
+			//Mapa
+			mapa = new Map(pasto);
 		}
 
 		protected override void Update(GameTime gameTime)
@@ -128,7 +143,7 @@ namespace El_juego
 			GraphicsDevice.Clear(Color.CornflowerBlue);
 
 			_spriteBatch.Begin();
-			_spriteBatch.Draw(backgroundLv1, new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), Color.White);
+			mapa.Draw(_spriteBatch);
 			tbh.Draw(_spriteBatch, indiceTbh, spriteEffect);
 
 			_spriteBatch.End();

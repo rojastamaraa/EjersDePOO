@@ -53,3 +53,12 @@ C:\Users\Alumno\Desktop\EjersDePOO\El juego\obj\Debug\net6.0\El juego.pdb
 C:\Users\Alumno\Desktop\EjersDePOO\El juego\obj\Debug\net6.0\El juego.genruntimeconfig.cache
 C:\Users\Alumno\Desktop\EjersDePOO\El juego\obj\Debug\net6.0\ref\El juego.dll
 C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\grasstileset.xnb
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\arbol.xnb
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\cama.xnb
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\cepibolla.xnb
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\hongo.xnb
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\hongos.xnb
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\mesitadeluz.xnb
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\suelo.xnb
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\tronco.xnb
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\Wooden House.xnb
