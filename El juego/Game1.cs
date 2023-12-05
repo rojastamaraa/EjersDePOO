@@ -21,6 +21,7 @@ namespace El_juego
 		public int indiceTbh;
 		public int vel = 150;
 		private SpriteEffects spriteEffect;
+		public Rectangle tbhRect;
 
 		//Elementos
 		public Elemento pasto;
@@ -30,7 +31,12 @@ namespace El_juego
 		//Mapa
 		public Map mapa;
 		//float temp, temp2;
-  //      bool parpadeo = false;
+		//      bool parpadeo = false;
+
+		//Fuentes
+		SpriteFont test;
+
+		string testeo = ""; 
 		public Game1()
 		{
 			_graphics = new GraphicsDeviceManager(this);
@@ -61,6 +67,7 @@ namespace El_juego
 
 			//Mapa
 			mapa = new Map(pasto, tierra);
+			test = Content.Load<SpriteFont>("arial");
 		}
 
 		protected override void Update(GameTime gameTime)
@@ -74,9 +81,21 @@ namespace El_juego
 				tbh.ani.frameActual = 0;
 			}
 
-			if (new Rectangle(0, 1, tierra.ancho, tierra.alto).Intersects(tbh.rect))
-			{
-				tbh.pos = new Vector2(100, 100);
+			testeo = "123123132";
+
+			tbhRect = new Rectangle((int)tbh.pos.X, (int)tbh.pos.Y, 49, 49);
+
+            foreach (var tierra in mapa.tierraList)
+            {
+				Rectangle tierraRect = new Rectangle((int)tierra.X,(int)tierra.Y, (int)tierra.Width, (int)tierra.Height);
+
+				if (colision(tbhRect, tierraRect))
+				{
+
+					testeo = "";
+					break;
+				}
+
 			}
 			
 			//Movimiento
@@ -153,7 +172,7 @@ namespace El_juego
 			_spriteBatch.Begin();
 			mapa.Draw(_spriteBatch);
 			tbh.Draw(_spriteBatch, indiceTbh, spriteEffect);
-
+			_spriteBatch.DrawString(test, testeo, new Vector2(tbh.pos.X - 10, tbh.pos.Y - 10), Color.White);
 			_spriteBatch.End();
 			base.Draw(gameTime);
 		}

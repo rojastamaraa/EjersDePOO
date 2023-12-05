@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/../../../../../Downloads/arial.spritefont</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/Arial.spritefont</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/arbol.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/Background.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/cama.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/cepibolla.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/hongo.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/hongos.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/mesitadeluz.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/suelo.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/tbhwalk.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/tronco.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/Wooden House.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File>arial.spritefont</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

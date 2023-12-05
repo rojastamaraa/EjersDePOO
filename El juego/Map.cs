@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace El_juego
 {
@@ -29,16 +30,20 @@ namespace El_juego
 				}
 			}
 
-
+			int parcelas = 192;
 			for (int t = 0; t < 3; t++)
 			{
 				for (int i = 0; i < 4; i++)
 				{
 					for (int j = 0; j < 6; j++)
 					{
-						tierraList.Add(new Rectangle(0, 1, tierra.ancho, tierra.alto));
+						Vector2 pos = new Vector2(parcelas + 31 * j, 320 + 31 * i);
+						tierraList.Add(new Rectangle((int)pos.X, (int)pos.Y, tierra.ancho, tierra.alto));
 					}
+
 				}
+				if (t == 0) { parcelas = parcelas * 3; }
+				else { parcelas = parcelas + 192 * 2; }
 			}
 		}
 
@@ -59,8 +64,7 @@ namespace El_juego
 
 			//Tierra
 			int parcelas = 192;
-			for (int t = 0; t < 3; t++)
-			{
+			for (int t = 0; t < 3; t++){ 
 				for (int i = 0; i < 4; i++)
 				{
 					for (int j = 0; j < 6; j++)
