@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/arbol.png</SourceFile>
-  <SourceTime>2023-11-28T21:50:14.0870931-03:00</SourceTime>
+  <SourceTime>2023-12-03T18:28:08.5414602-03:00</SourceTime>
   <DestFile>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/bin/DesktopGL/Content/img/arbol.xnb</DestFile>
-  <DestTime>2023-11-28T23:11:50.9320404-03:00</DestTime>
+  <DestTime>2023-12-03T18:29:58.203625-03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T08:44:56-03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

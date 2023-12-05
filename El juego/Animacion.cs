@@ -37,7 +37,7 @@ public class Animacion
 	public void Draw(SpriteBatch spriteBatch, Vector2 pos, SpriteEffects spriteEffect)
 	{
 		Rectangle rectangle = new Rectangle((frameActual*ancho), Y*alto, ancho, alto);
-		spriteBatch.Draw(textura, pos, rectangle, Color.White, 0f, Vector2.Zero, 0.1f, spriteEffect, 0f);
+		spriteBatch.Draw(textura, pos, rectangle, Color.White, 0f, Vector2.Zero, 0.08f, spriteEffect, 0f);
 	}
 }
 

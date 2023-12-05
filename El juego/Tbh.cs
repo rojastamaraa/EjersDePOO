@@ -13,12 +13,14 @@ namespace El_juego
 	public class Tbh
 	{
 		public Animacion ani;
+		public Rectangle rect;
 		public Vector2 pos;
 
 		public Tbh(Animacion ani, Vector2 pos)
 		{
 			this.ani = ani;
 			this.pos = pos;
+			rect = new Rectangle(ani.frameActual * ani.ancho, ani.Y * ani.alto, ani.ancho, ani.alto);
 		}
 
 		public void Update(GameTime gameTime, int vel) 

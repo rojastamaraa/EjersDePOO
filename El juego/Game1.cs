@@ -12,18 +12,20 @@ namespace El_juego
 	{
 		private GraphicsDeviceManager _graphics;
 		private SpriteBatch _spriteBatch;
+
+		//TPersonaje
 		public Tbh tbh;
 		public Animacion tbhAni;
 		public Texture2D tbhTexture;
 		private Vector2 tbhPos = new Vector2(100, 100);
 		public int indiceTbh;
 		public int vel = 150;
-		public Texture2D backgroundLv1;
 		private SpriteEffects spriteEffect;
 
 		//Elementos
 		public Elemento pasto;
-		public Texture2D pastoTexture;
+		public Texture2D sueloTexture;
+		public Elemento tierra;
 
 		//Mapa
 		public Map mapa;
@@ -34,9 +36,9 @@ namespace El_juego
 			_graphics = new GraphicsDeviceManager(this);
 			Content.RootDirectory = "Content";
 			IsMouseVisible = true;
-            _graphics.PreferredBackBufferWidth = 800;
-            _graphics.PreferredBackBufferHeight = 600;
-            _graphics.IsFullScreen = true;
+            _graphics.PreferredBackBufferWidth = 1700;
+            _graphics.PreferredBackBufferHeight = 1100;
+            _graphics.IsFullScreen = false;
         }
 
 		protected override void Initialize()
@@ -47,18 +49,18 @@ namespace El_juego
 		protected override void LoadContent()
 		{
 			_spriteBatch = new SpriteBatch(GraphicsDevice);
-			tbhTexture = Content.Load<Texture2D>("img/tbhwalk");
-			backgroundLv1 = Content.Load<Texture2D>("img/Background");
+			tbhTexture = Content.Load<Texture2D>("img/tbhWalk");
 			spriteEffect = SpriteEffects.None;
 			tbhAni = new Animacion(tbhTexture, 609, 609, indiceTbh, 4);
 			tbh = new Tbh(tbhAni, tbhPos);
 
 			//Elementos
-			pastoTexture = Content.Load<Texture2D>("img/suelo");
-			pasto = new Elemento(pastoTexture, 16, 16, 0, 0);
+			sueloTexture = Content.Load<Texture2D>("img/suelo");
+			pasto = new Elemento(sueloTexture, 16, 16, 0, 0);
+			tierra = new Elemento(sueloTexture, 16, 16, 0, 1);
 
 			//Mapa
-			mapa = new Map(pasto);
+			mapa = new Map(pasto, tierra);
 		}
 
 		protected override void Update(GameTime gameTime)
@@ -72,7 +74,13 @@ namespace El_juego
 				tbh.ani.frameActual = 0;
 			}
 
-            if (key.IsKeyDown(Keys.Down))
+			if (new Rectangle(0, 1, tierra.ancho, tierra.alto).Intersects(tbh.rect))
+			{
+				tbh.pos = new Vector2(100, 100);
+			}
+			
+			//Movimiento
+			if (key.IsKeyDown(Keys.Down))
 			{
 				if (key.IsKeyDown(Keys.LeftShift))
 				{
@@ -149,5 +157,10 @@ namespace El_juego
 			_spriteBatch.End();
 			base.Draw(gameTime);
 		}
+		public bool colision(Rectangle tbh, Rectangle obj)
+		{
+			return tbh.Intersects(obj);
+		}
 	}
 }
+
