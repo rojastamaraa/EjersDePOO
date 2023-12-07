@@ -7,19 +7,23 @@
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/../../../../../Downloads/arial.spritefont</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/Arial.spritefont</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/arbol.png</File>
-    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/Background.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/calabaza.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/cama.png</File>
-    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/cepibolla.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/hongo.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/hongos.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/maiz.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/mesitadeluz.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/point.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/suelo.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/tbhwalk.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/tomate.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/tronco.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/Wooden House.png</File>
   </SourceFiles>
   <DestFiles>
     <File>arial.spritefont</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

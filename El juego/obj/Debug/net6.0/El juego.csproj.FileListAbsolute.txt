@@ -63,3 +63,7 @@ C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\
 C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\tronco.xnb
 C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\Wooden House.xnb
 C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\Arial.xnb
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\point.xnb
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\maiz.xnb
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\tomate.xnb
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\calabaza.xnb

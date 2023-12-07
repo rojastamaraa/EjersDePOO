@@ -39,7 +39,7 @@
 /processorParam:TextureFormat=Color
 /build:img/arbol.png
 
-#begin img/Background.png
+#begin img/calabaza.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -49,7 +49,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:img/Background.png
+/build:img/calabaza.png
 
 #begin img/cama.png
 /importer:TextureImporter
@@ -62,18 +62,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:img/cama.png
-
-#begin img/cepibolla.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:img/cepibolla.png
 
 #begin img/hongo.png
 /importer:TextureImporter
@@ -99,6 +87,18 @@
 /processorParam:TextureFormat=Color
 /build:img/hongos.png
 
+#begin img/maiz.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:img/maiz.png
+
 #begin img/mesitadeluz.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -110,6 +110,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:img/mesitadeluz.png
+
+#begin img/point.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:img/point.png
 
 #begin img/suelo.png
 /importer:TextureImporter
@@ -134,6 +146,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:img/tbhwalk.png
+
+#begin img/tomate.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:img/tomate.png
 
 #begin img/tronco.png
 /importer:TextureImporter
