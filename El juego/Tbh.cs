@@ -18,10 +18,6 @@ namespace El_juego
 		public Rectangle rect;
 		private SpriteEffects spriteEffect;
 		public string testeo = "";
-
-
-		bool plante;
-		int indiceTierraPlantada;
 		public Tbh(Animacion ani, Vector2 pos)
 		{
 			this.ani = ani;
@@ -41,7 +37,7 @@ namespace El_juego
 			{ pos.X += 3; ani.Y = 2; spriteEffect = SpriteEffects.FlipHorizontally; ani.Update(gameTime, 150); }
 			if(key.GetPressedKeys().Length == 0) { ani.frameActual = 0; }
 
-			//Colision
+			//Colisiones
 			huertaColision(gameTime, mapa.huertaCepibolla.tierra, mapa.huertaCepibolla.tierraList, key);
 			huertaColision(gameTime, mapa.huertaMaiz.tierra, mapa.huertaMaiz.tierraList, key);
 			huertaColision(gameTime, mapa.huertaTomate.tierra, mapa.huertaTomate.tierraList, key);
@@ -58,18 +54,14 @@ namespace El_juego
 				{
 					if (rect.Intersects(tierraList[i, j]))
 					{
-						//indice = i + "," + j;
-						//tbh.testeo = "Sobre la tierra " + indice;
 						if (tierra[i, j].etapa == -1 && key.IsKeyDown(Keys.F))
 						{
 							tierra[i, j].etapa = 0;
 							tierra[i, j].fueRegado = 1;
-							//tbh.testeo = "1ra etapa";
 						}
 
 						if (tierra[i, j].etapa < 3 && tierra[i, j].etapa != -1)
 						{
-							//tbh.testeo = "Etapa" + mapa.huertaCepibolla.tierra[i, j].etapa;
 							if (tierra[i, j].fueRegado == 1)
 							{
 								if (key.IsKeyDown(Keys.Space))
@@ -77,11 +69,9 @@ namespace El_juego
 									tierra[i, j].fueRegado = 2;
 								}
 							}
-
 						}
 						if (tierra[i, j].etapa == 3)
 						{
-							//tbh.testeo = "Etapa" + mapa.huertaCepibolla.tierra[i, j].etapa;
 							if (key.IsKeyDown(Keys.Space))
 							{
 								tierra[i, j].etapa = -1;

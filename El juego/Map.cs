@@ -51,7 +51,8 @@ namespace El_juego
 					spriteBatch.Draw(pasto.tex, pos, rect, Color.White, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
 				}
 			}
-
+			 
+			//Huertas
 			huertaCepibolla.Draw(spriteBatch, tierraText, cebolla);
 			huertaMaiz.Draw(spriteBatch, tierraText, maiz);
 			huertaTomate.Draw(spriteBatch, tierraText, tomate);
