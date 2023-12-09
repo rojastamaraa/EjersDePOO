@@ -11,9 +11,8 @@ namespace El_juego
 	public class Elemento
 	{
 		public Texture2D tex;
-		public Rectangle rect;
-		public int ancho, alto, Y, X;	
-		public Elemento(Texture2D text, int ancho, int alto, int X, int Y)
+		public int ancho, alto;	
+		public Elemento(Texture2D text, int ancho, int alto)
 		{
 			this.tex = text;
 			this.ancho = ancho;

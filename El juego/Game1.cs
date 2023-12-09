@@ -17,12 +17,13 @@ namespace El_juego
 		public Tbh tbh;
 		public Animacion tbhAni;
 		public Texture2D tbhTexture;
-		private Vector2 tbhPos = new Vector2(100, 100);
+		private Vector2 tbhPos = new Vector2(650, 300);
 
 		//Elementos
 		public Elemento pasto, valla, vallaLateral, vallaLateralFin;
 		public Texture2D sueloTexture, calabaza, maiz, tomate, vallatext, vallatextLateral, vallatextLateralFin;
-
+		public Elemento techo, paredes, suelo, puerta;
+		public Texture2D techoText, paredesText, casaText;
 		//Mapa
 		public Map mapa;
 
@@ -60,13 +61,20 @@ namespace El_juego
 			vallatext = Content.Load<Texture2D>("img/valla");
 			vallatextLateral = Content.Load<Texture2D>("img/vallaC");
 			vallatextLateralFin = Content.Load<Texture2D>("img/vallaF");
-			pasto = new Elemento(sueloTexture, 16, 16, 0, 0);
-			valla = new Elemento(vallatext, 32, 19, 0, 0);
-			vallaLateral = new Elemento(vallatextLateral, 7, 42, 0, 0);
-			vallaLateralFin = new Elemento(vallatextLateralFin, 7, 39, 0, 0);
+			casaText = Content.Load<Texture2D>("img/casa");
+			paredesText = Content.Load<Texture2D>("img/casaParedes");
+			techoText = Content.Load<Texture2D>("img/techo");
+			pasto = new Elemento(sueloTexture, 16, 16);
+			valla = new Elemento(vallatext, 32, 19);
+			vallaLateral = new Elemento(vallatextLateral, 7, 42);
+			vallaLateralFin = new Elemento(vallatextLateralFin, 7, 39);
+			suelo = new Elemento(casaText, 48, 48);	
+			paredes = new Elemento(paredesText, 288, 192);
+			puerta = new Elemento(casaText, 48, 48);
+			techo = new Elemento(techoText, 288, 160);
 
 			//Mapa
-			mapa = new Map(pasto, valla, vallaLateral, vallaLateralFin);
+			mapa = new Map(pasto, valla, vallaLateral, vallaLateralFin, suelo, paredes, puerta, techo);
 
 			//Testeo
 			testpoint = Content.Load<Texture2D>("img/point");
@@ -91,7 +99,7 @@ namespace El_juego
 			_spriteBatch.Begin();
 			mapa.Draw(_spriteBatch, sueloTexture, calabaza, maiz, tomate);
 			tbh.Draw(_spriteBatch);
-			//_spriteBatch.Draw(testpoint, new Vector2((int)tbh.pos.X+6, (int)tbh.pos.Y+32), new Rectangle(0, 0, 35, 15), Color.White);
+			//_spriteBatch.Draw(testpoint, new Vector2((int)tbh.pos.X+15, (int)tbh.pos.Y+42), new Rectangle(0, 0, 20, 5), Color.White);
 			_spriteBatch.DrawString(test, tbh.testeo, new Vector2(tbh.pos.X - 10, tbh.pos.Y - 10), Color.White);
 			_spriteBatch.End();
 			base.Draw(gameTime);

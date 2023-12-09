@@ -18,6 +18,7 @@ namespace El_juego
 		public Rectangle rect;
 		private SpriteEffects spriteEffect;
 		public string testeo = "";
+		public int monedas;
 		public Tbh(Animacion ani, Vector2 pos)
 		{
 			this.ani = ani;
@@ -37,7 +38,7 @@ namespace El_juego
 			{ pos.X += 1; ani.Y = 2; spriteEffect = SpriteEffects.FlipHorizontally; ani.Update(gameTime, 150); }
 			if (key.GetPressedKeys().Length == 0) { ani.frameActual = 0; }
 
-			testeo = "fuera";
+			//testeo = "fuera";
 
 			//Colisiones
 			rect = new Rectangle((int)pos.X + 49 / 2, (int)pos.Y + 45, 1, 1);
@@ -46,16 +47,36 @@ namespace El_juego
 			huertaColision(gameTime, mapa.huertaTomate.tierra, mapa.huertaTomate.tierraList, key);
 			huertaColision(gameTime, mapa.huertaMaiz.tierra, mapa.huertaMaiz.tierraList, key);
 
-			rect = new Rectangle((int)pos.X + 6, (int)pos.Y + 32, 35, 15);
+			rect = new Rectangle((int)pos.X + 6, (int)pos.Y + 42, 35, 5);
 
-			vallasColision(gameTime, mapa.huertaCalabaza.vallaList, key);
-			vallasColision(gameTime, mapa.huertaTomate.vallaList, key);
-			vallasColision(gameTime, mapa.huertaMaiz.vallaList, key);
+			objetoColision(gameTime, mapa.huertaCalabaza.vallaList, key);
+			objetoColision(gameTime, mapa.huertaTomate.vallaList, key);
+			objetoColision(gameTime, mapa.huertaMaiz.vallaList, key);
+			objetoColision(gameTime, mapa.casa.paredesList, key);
+
+			if (rect.Intersects(mapa.casa.puertaRect))
+			{
+				mapa.casa.puertaAbierta = true;
+			}
+			else
+			{
+				mapa.casa.puertaAbierta = false;
+			}
+
+			if (rect.Intersects(mapa.casa.pisoD))
+			{
+				mapa.casa.huesped = true;
+			}
+
+			if (rect.Intersects(mapa.casa.pisoF))
+			{
+				mapa.casa.huesped = false;
+			}
 
 			if (key.IsKeyDown(Keys.A))
 			{
 				mapa.huertaCalabaza.desbloqueado = true;
-			}			
+			}
 		}
 		public void Draw(SpriteBatch spriteBatch)
 		{
@@ -69,7 +90,7 @@ namespace El_juego
 				{
 					if (rect.Intersects(tierraList[i, j]))
 					{
-						testeo = "Tierra: " + i + "," + j;
+						testeo = "$" + monedas;
 						if (tierra[i, j].etapa == -1 && key.IsKeyDown(Keys.F))
 						{
 							tierra[i, j].etapa = 0;
@@ -92,6 +113,7 @@ namespace El_juego
 							{
 								tierra[i, j].etapa = -1;
 								tierra[i, j].fueRegado = 0;
+								monedas++;
 							}
 						}
 					}
@@ -107,13 +129,13 @@ namespace El_juego
 			}
 		}
 
-		public void vallasColision(GameTime gameTime, Rectangle[,] vallaList, KeyboardState key)
+		public void objetoColision(GameTime gameTime, Rectangle[,] objeto, KeyboardState key)
 		{
 			for (int i = 0; i < 4; i++)
 			{
 				for (int j = 0; j < 6; j++)
 				{
-					if (rect.Intersects(vallaList[i, j]))
+					if (rect.Intersects(objeto[i, j]))
 					{
 						if (key.IsKeyDown(Keys.Up))
 						{pos = new Vector2(pos.X, pos.Y + 1);}
@@ -124,6 +146,23 @@ namespace El_juego
 						if (key.IsKeyDown(Keys.Left))
 						{pos = new Vector2(pos.X + 1, pos.Y);}
 					}
+				}
+			}
+		}
+		public void objetoColision(GameTime gameTime, List<Rectangle> objeto, KeyboardState key)
+		{
+			foreach (var pared in objeto)
+			{
+				if (rect.Intersects(pared))
+				{
+					if (key.IsKeyDown(Keys.Up))
+					{ pos = new Vector2(pos.X, pos.Y + 1); }
+					if (key.IsKeyDown(Keys.Down))
+					{ pos = new Vector2(pos.X, pos.Y - 1); }
+					if (key.IsKeyDown(Keys.Right))
+					{ pos = new Vector2(pos.X - 1, pos.Y); }
+					if (key.IsKeyDown(Keys.Left))
+					{ pos = new Vector2(pos.X + 1, pos.Y); }
 				}
 			}
 		}

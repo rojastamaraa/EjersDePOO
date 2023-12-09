@@ -70,3 +70,6 @@ C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\
 C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\valla.xnb
 C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\vallaC.xnb
 C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\vallaF.xnb
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\casa.xnb
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\casaParedes.xnb
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\techo.xnb

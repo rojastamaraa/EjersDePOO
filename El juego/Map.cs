@@ -13,10 +13,15 @@ namespace El_juego
 		static Random r = new Random();
 		int[,] r2 = new int[62, 100];
 
-		//Huertas
 		public Huerta huertaCalabaza, huertaMaiz, huertaTomate;
 
-		public Map(Elemento pasto, Elemento valla, Elemento vallaLateral, Elemento vallaLateralFin)
+		public Casa casa;
+		public Elemento suelo, paredes, puerta;
+
+		public Map(
+					Elemento pasto, Elemento valla, Elemento vallaLateral, Elemento vallaLateralFin, 
+					Elemento suelo, Elemento paredes, Elemento puerta, Elemento techo
+				  )
 		{
 			altura = 1000;
 			ancho = 1600;
@@ -24,6 +29,9 @@ namespace El_juego
 			this.valla = valla;
 			this.vallaLateral = vallaLateral;
 			this.vallaLateralFin = vallaLateralFin;
+			this.suelo = suelo;
+			this.paredes = paredes;
+			this.puerta = puerta;
 
 			for (int i = 0; i < 62; i++)
 			{
@@ -33,9 +41,11 @@ namespace El_juego
 				}
 			}
 			
-			huertaCalabaza = new Huerta("calabaza", new Vector2(192, 320), valla, vallaLateral, vallaLateralFin);
-			huertaTomate = new Huerta("tomate", new Vector2(576, 320), valla, vallaLateral, vallaLateralFin);
-			huertaMaiz = new Huerta("maiz", new Vector2(960, 320), valla, vallaLateral, vallaLateralFin);
+			huertaCalabaza = new Huerta("calabaza", new Vector2(192, 432), valla, vallaLateral, vallaLateralFin);
+			huertaTomate = new Huerta("tomate", new Vector2(576, 432), valla, vallaLateral, vallaLateralFin);
+			huertaMaiz = new Huerta("maiz", new Vector2(960, 432), valla, vallaLateral, vallaLateralFin);
+			
+			casa = new Casa(suelo, paredes, puerta, techo);
 		}
 
 		public void Draw(SpriteBatch spriteBatch, Texture2D tierraText, Texture2D cebolla, Texture2D maiz, Texture2D tomate)
@@ -57,6 +67,7 @@ namespace El_juego
 			huertaCalabaza.Draw(spriteBatch, tierraText, cebolla);
 			huertaTomate.Draw(spriteBatch, tierraText, tomate);
 			huertaMaiz.Draw(spriteBatch, tierraText, maiz);
+			casa.Draw(spriteBatch);
 		}
 	}
 }
