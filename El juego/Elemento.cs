@@ -18,7 +18,6 @@ namespace El_juego
 			this.tex = text;
 			this.ancho = ancho;
 			this.alto = alto;
-			rect = new Rectangle(X*ancho, Y*alto, ancho, alto);
 		}
 	}
 }

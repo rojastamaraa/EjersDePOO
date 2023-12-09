@@ -18,10 +18,16 @@
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/tbhwalk.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/tomate.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/tronco.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/valla.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/vallaC.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/vallaF.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/Wooden House.png</File>
   </SourceFiles>
   <DestFiles>
     <File>arial.spritefont</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

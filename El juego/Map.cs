@@ -9,20 +9,21 @@ namespace El_juego
 	public class Map
 	{
 		public int altura, ancho;
-		public Elemento pasto;
+		public Elemento pasto, valla, vallaLateral, vallaLateralFin;
 		static Random r = new Random();
 		int[,] r2 = new int[62, 100];
 
 		//Huertas
-		public Huerta huertaCepibolla;
-		public Huerta huertaMaiz;
-		public Huerta huertaTomate;
+		public Huerta huertaCalabaza, huertaMaiz, huertaTomate;
 
-		public Map(Elemento pasto)
+		public Map(Elemento pasto, Elemento valla, Elemento vallaLateral, Elemento vallaLateralFin)
 		{
 			altura = 1000;
 			ancho = 1600;
 			this.pasto = pasto;
+			this.valla = valla;
+			this.vallaLateral = vallaLateral;
+			this.vallaLateralFin = vallaLateralFin;
 
 			for (int i = 0; i < 62; i++)
 			{
@@ -31,10 +32,10 @@ namespace El_juego
 					r2[i, j] = r.Next(0, 5);
 				}
 			}
-
-			huertaCepibolla = new Huerta("calabaza", new Vector2(192, 320));
-			huertaMaiz = new Huerta("maiz", new Vector2(576, 320));
-			huertaTomate = new Huerta("tomate", new Vector2(960, 320));
+			
+			huertaCalabaza = new Huerta("calabaza", new Vector2(192, 320), valla, vallaLateral, vallaLateralFin);
+			huertaTomate = new Huerta("tomate", new Vector2(576, 320), valla, vallaLateral, vallaLateralFin);
+			huertaMaiz = new Huerta("maiz", new Vector2(960, 320), valla, vallaLateral, vallaLateralFin);
 		}
 
 		public void Draw(SpriteBatch spriteBatch, Texture2D tierraText, Texture2D cebolla, Texture2D maiz, Texture2D tomate)
@@ -47,16 +48,15 @@ namespace El_juego
 				for (int j = 0; j < X; j++)
 				{
 					Rectangle rect = new Rectangle(r2[i, j] * pasto.ancho, 0, pasto.ancho, pasto.alto);
-					Vector2 pos = new Vector2(31 * j, 31 * i);
+					Vector2 pos = new Vector2(32 * j, 32 * i);
 					spriteBatch.Draw(pasto.tex, pos, rect, Color.White, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
 				}
 			}
 			 
 			//Huertas
-			huertaCepibolla.Draw(spriteBatch, tierraText, cebolla);
-			huertaMaiz.Draw(spriteBatch, tierraText, maiz);
+			huertaCalabaza.Draw(spriteBatch, tierraText, cebolla);
 			huertaTomate.Draw(spriteBatch, tierraText, tomate);
-
+			huertaMaiz.Draw(spriteBatch, tierraText, maiz);
 		}
 	}
 }

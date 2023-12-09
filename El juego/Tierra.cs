@@ -17,7 +17,6 @@ namespace El_juego
 
 		public Tierra(Vector2 pos)
 		{
-
 			etapa = -1;
 			this.pos = pos;
 		}

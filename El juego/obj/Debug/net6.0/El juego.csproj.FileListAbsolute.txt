@@ -67,3 +67,6 @@ C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\
 C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\maiz.xnb
 C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\tomate.xnb
 C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\calabaza.xnb
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\valla.xnb
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\vallaC.xnb
+C:\Users\tamar\OneDrive\Escritorio\EjersDePOO\El juego\bin\Debug\net6.0\Content\img\vallaF.xnb

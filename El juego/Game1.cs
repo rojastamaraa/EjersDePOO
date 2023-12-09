@@ -17,27 +17,25 @@ namespace El_juego
 		public Tbh tbh;
 		public Animacion tbhAni;
 		public Texture2D tbhTexture;
-		private Vector2 tbhPos = new Vector2(300, 300);
+		private Vector2 tbhPos = new Vector2(100, 100);
 
 		//Elementos
-		public Texture2D sueloTexture;
-		public Elemento pasto;
-		public Texture2D calabaza;
-		public Texture2D maiz;
-		public Texture2D tomate;
+		public Elemento pasto, valla, vallaLateral, vallaLateralFin;
+		public Texture2D sueloTexture, calabaza, maiz, tomate, vallatext, vallatextLateral, vallatextLateralFin;
 
 		//Mapa
 		public Map mapa;
 
 		SpriteFont test;
+		public Texture2D testpoint;
 		public Game1()
 		{
 			_graphics = new GraphicsDeviceManager(this);
 			Content.RootDirectory = "Content";
 			IsMouseVisible = true;
-            _graphics.PreferredBackBufferWidth = 1700;
-            _graphics.PreferredBackBufferHeight = 1100;
-            _graphics.IsFullScreen = true;
+            _graphics.PreferredBackBufferWidth = 1600;
+            _graphics.PreferredBackBufferHeight = 1000;
+            _graphics.IsFullScreen = false;
         }
 
 		protected override void Initialize()
@@ -56,13 +54,22 @@ namespace El_juego
 
 			//Elementos
 			sueloTexture = Content.Load<Texture2D>("img/suelo");
-			cebolla = Content.Load<Texture2D>("img/calabaza");
+			calabaza = Content.Load<Texture2D>("img/calabaza");
 			maiz = Content.Load<Texture2D>("img/maiz");
 			tomate= Content.Load<Texture2D>("img/tomate");
+			vallatext = Content.Load<Texture2D>("img/valla");
+			vallatextLateral = Content.Load<Texture2D>("img/vallaC");
+			vallatextLateralFin = Content.Load<Texture2D>("img/vallaF");
 			pasto = new Elemento(sueloTexture, 16, 16, 0, 0);
+			valla = new Elemento(vallatext, 32, 19, 0, 0);
+			vallaLateral = new Elemento(vallatextLateral, 7, 42, 0, 0);
+			vallaLateralFin = new Elemento(vallatextLateralFin, 7, 39, 0, 0);
 
 			//Mapa
-			mapa = new Map(pasto);
+			mapa = new Map(pasto, valla, vallaLateral, vallaLateralFin);
+
+			//Testeo
+			testpoint = Content.Load<Texture2D>("img/point");
 
 		}
 
@@ -72,9 +79,6 @@ namespace El_juego
 				Exit();
 
 			KeyboardState key = Keyboard.GetState();
-
-			tbh.testeo = "fuera";
-			tbh.rect = new Rectangle((int)tbh.pos.X+49/2, (int)tbh.pos.Y+45, 1, 1);
 
 			tbh.Update(gameTime, mapa, key);
 			base.Update(gameTime);
@@ -87,6 +91,7 @@ namespace El_juego
 			_spriteBatch.Begin();
 			mapa.Draw(_spriteBatch, sueloTexture, calabaza, maiz, tomate);
 			tbh.Draw(_spriteBatch);
+			//_spriteBatch.Draw(testpoint, new Vector2((int)tbh.pos.X+6, (int)tbh.pos.Y+32), new Rectangle(0, 0, 35, 15), Color.White);
 			_spriteBatch.DrawString(test, tbh.testeo, new Vector2(tbh.pos.X - 10, tbh.pos.Y - 10), Color.White);
 			_spriteBatch.End();
 			base.Draw(gameTime);
