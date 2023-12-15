@@ -6,27 +6,73 @@
   <SourceFiles>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/../../../../../Downloads/arial.spritefont</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/Arial.spritefont</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/blop.wav</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/cigarras.mp3</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/enemigo.mp3</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/enemigoGolpe.mp3</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/fuente.mp3</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/harmonica.wav</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/agua.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/arbol.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/balsa.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/botones.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/calabaza.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/cama.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/casa.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/casaParedes.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/enemigo.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/escapaste.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/hongo.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/hongos.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/inicio.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/inventario.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/llaves.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/madera.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/maiz.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/menu.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/mesitadeluz.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/muerto.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/point.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/pozo.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/suelo.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/tbhwalk.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/tbhWin.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/techo.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/tomate.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/tronco.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/valla.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/vallaC.png</File>
     <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/img/vallaF.png</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/plantando.mp3</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/regando.mp3</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/splash.wav</File>
+    <File>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/yipee.mp3</File>
   </SourceFiles>
   <DestFiles>
     <File>arial.spritefont</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

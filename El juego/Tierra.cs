@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -21,14 +22,15 @@ namespace El_juego
 			this.pos = pos;
 		}
 
-		public void Update(GameTime gameTime)
+		public void Update(GameTime gameTime, SoundEffect blop)
 		{
 			if (fueRegado == 2)
 			{
 				temporizador += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 
-				if (temporizador > 2000)
+				if (temporizador > 15000)
 				{
+					blop.Play();
 					fueRegado = 1;
 					etapa++;
 					temporizador = 0;

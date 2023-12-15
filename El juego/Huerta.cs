@@ -9,23 +9,26 @@ namespace El_juego
 {
 	public class Huerta
 	{
-		public Texture2D Texture;
+		public Texture2D Texture, madera;
 		public Rectangle[,] tierraList, vallaList;
+		public Rectangle[] alrededor;
 		public Tierra[,] tierra;
 		public Elemento valla, vallaLateral, vallaLateralFin;
 		public Vector2 pos;
 		public string tipo;
 		public bool desbloqueado;
-		public Huerta(string tipo, Vector2 pos, Elemento valla, Elemento vallaLateral, Elemento vallaLateralFin)
+		public Huerta(string tipo, Vector2 pos, Elemento valla, Elemento vallaLateral, Elemento vallaLateralFin, Texture2D madera)
 		{
 			this.tipo = tipo;
 			this.pos = pos;
 			this.valla = valla;
 			this.vallaLateral = vallaLateral;
 			this.vallaLateralFin = vallaLateralFin;
+			this.madera = madera;
 			tierraList = new Rectangle[4, 6];
 			vallaList = new Rectangle[4, 6];
 			tierra = new Tierra[4, 6];
+			alrededor = new Rectangle[4];
 			for (int i = 0; i < 4; i++)
 			{
 				for (int j = 0; j < 6; j++)
@@ -34,6 +37,11 @@ namespace El_juego
 					tierra[i, j] = new Tierra(new Vector2((int)pos.X + 32 * j, (int)pos.Y + 32 * i));
 				}
 			}
+
+			alrededor[0] = new Rectangle((int)pos.X - 32, (int)pos.Y + 32, 32, 32);
+			alrededor[1] = new Rectangle((int)pos.X - 32, (int)pos.Y + 64, 32, 32);
+			alrededor[2] = new Rectangle((int)pos.X + 192, (int)pos.Y + 32, 32, 32);
+			alrededor[3] = new Rectangle((int)pos.X + 192, (int)pos.Y + 64, 32, 32);
 		}
 
 		public void Draw(SpriteBatch spriteBatch, Texture2D tierraText, Texture2D cultivo)
@@ -129,6 +137,20 @@ namespace El_juego
 						}
 					}
 				}
+			}
+
+			//Alrededor
+
+			if (tipo != "tomate")
+			{
+				//alrededor[0] = new Rectangle((int)pos.X - 32, (int)pos.Y + 32, 32, 32);
+				//alrededor[1] = new Rectangle((int)pos.X - 32, (int)pos.Y + 64, 32, 32);
+				//alrededor[2] = new Rectangle((int)pos.X + 192, (int)pos.Y + 32, 32, 32);
+				//alrededor[3] = new Rectangle((int)pos.X + 192, (int)pos.Y + 64, 32, 32);
+				spriteBatch.Draw(madera, new Vector2((int)pos.X - 40, (int)pos.Y + 32), new Rectangle(64, 32, 32, 32), Color.White);
+				spriteBatch.Draw(madera, new Vector2((int)pos.X - 40, (int)pos.Y + 64), new Rectangle(64, 32, 32, 32), Color.White);
+				spriteBatch.Draw(madera, new Vector2((int)pos.X + 200, (int)pos.Y + 32), new Rectangle(64, 32, 32, 32), Color.White);
+				spriteBatch.Draw(madera, new Vector2((int)pos.X + 200, (int)pos.Y + 64), new Rectangle(64, 32, 32, 32), Color.White);
 			}
 		}
 	}

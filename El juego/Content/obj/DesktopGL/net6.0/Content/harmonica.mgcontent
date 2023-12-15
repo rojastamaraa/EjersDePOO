@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/harmonica.wav</SourceFile>
+  <SourceTime>2023-12-14T22:50:59.4696686-03:00</SourceTime>
+  <DestFile>C:/Users/tamar/OneDrive/Escritorio/EjersDePOO/El juego/Content/bin/DesktopGL/Content/harmonica.xnb</DestFile>
+  <DestTime>2023-12-14T22:54:02.9175158-03:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2022-07-26T08:44:56-03:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2022-07-26T08:44:56-03:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>
