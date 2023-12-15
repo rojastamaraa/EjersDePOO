@@ -20,7 +20,7 @@ namespace El_juego
 		public bool arriba, abajo, derecha, izquierda, colisiono, tiempoC, cerca;
 		public Enemigo(Animacion texture)
 		{
-			tiempo = 120000;
+			tiempo = 90000;
 			pos = new Vector2(-1000, 600);
 			this.texture = texture;
 		}
@@ -66,7 +66,7 @@ namespace El_juego
 
 				if (tiempoC == true)
 				{
-					tiempo = 1000 * r.Next(10, 250);
+					tiempo = 1000 * r.Next(10, 200);
 					tiempoC = false;
 				}
 				
